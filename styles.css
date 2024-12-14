@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+#images {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#image1-container, #image2-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display:flex;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #000;
+  
+}
+
+#score, #timer {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+#message {
+  font-size: 1.5em;
+  color: green;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  img {
+    width: 100%;
+  }
+}
+
+/* Styles for difference markers */
+.difference {
+  position: absolute;
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.3);  /* Red with some transparency */
+  opacity: 0; /* Show red boxes from the start */
+  transition: opacity 0.3s ease;  /* Smooth transition when clicked */
+}
+
+/* Highlight the difference when found */
+.difference.found {
+  background-color: rgba(0, 255, 0, 0.3); /* Change color to green when found */
+  border: 2px solid green; /* Change border to green */
+}
